@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ContosoUniversityTARpe21.props" />
+</Project>
