@@ -127,16 +127,28 @@ namespace ContosoUniversityTARpe21.Controllers
             var student = await _context.Students.FindAsync(id);
             if (student == null)
             {
-                return NotFound();
+                return RedirectToAction(nameof(Index));
             }
-            _context.Students.Remove(student);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            try
+            {
+                _context.Students.Remove(student);
+                await _context.SaveChangesAsync();
+                return View(student);
+            }
+            catch (DbUpdateException)
+            {
+
+                return RedirectToAction(nameof(Delete), new
+                {
+                    id = id,
+                    saveChangesError = true
+                });
+            }
+
         }
-        
-        private bool StuentExists(int id)
+        private bool StudentExists(int id)
         {
-            return _context.Students.Any(s=> s.ID == id);
-        } 
+            return _context.Students.Any(s => s.ID == id);
+        }
     }
 }

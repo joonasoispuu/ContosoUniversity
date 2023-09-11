@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xcgcn8yOD9hMpwcY2Hdvf+A36Sn7TOaeMnYgwFiokbQ=",
+  "Hash": "82KGHGVdwpyFY8CLpJtinR3CdJUbBT7n1AOBQ8sd3OI=",
   "Source": "ContosoUniversityTARpe21",
   "BasePath": "_content/ContosoUniversityTARpe21",
   "Mode": "Default",
@@ -85,12 +85,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "D:\\ContosoUniversity\\ContosoUniversityTARpe21\\wwwroot\\img\\drizzy.jfif",
+      "Identity": "D:\\ContosoUniversity\\ContosoUniversityTARpe21\\wwwroot\\img\\drizzy.jpg",
       "SourceId": "ContosoUniversityTARpe21",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ContosoUniversity\\ContosoUniversityTARpe21\\wwwroot\\",
       "BasePath": "_content/ContosoUniversityTARpe21",
-      "RelativePath": "img/drizzy.jfif",
+      "RelativePath": "img/drizzy.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -99,7 +99,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\drizzy.jfif"
+      "OriginalItemSpec": "wwwroot\\img\\drizzy.jpg"
     },
     {
       "Identity": "D:\\ContosoUniversity\\ContosoUniversityTARpe21\\wwwroot\\js\\site.js",
