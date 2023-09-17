@@ -1,13 +1,13 @@
-﻿using ContosoUniversityTARpe21.Models;
+﻿using ContoseUniversity.Models;
+using ContosoUniversityTARpe21.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace ContosoUniversityTARpe21.Data
+namespace ContoseUniversity.Data
 {
     public class SchoolContext : DbContext
     {
         public SchoolContext(DbContextOptions<SchoolContext> options) : base(options)
-        {
-        }
+        { }
 
         public DbSet<Course> Courses { get; set; }
         public DbSet<Enrollment> Enrollments { get; set; }
@@ -16,7 +16,6 @@ namespace ContosoUniversityTARpe21.Data
         public DbSet<Department> Departments { get; set; }
         public DbSet<OfficeAssignment> OfficeAssignments { get; set; }
         public DbSet<CourseAssignment> CourseAssignments { get; set; }
-
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -27,19 +26,8 @@ namespace ContosoUniversityTARpe21.Data
             modelBuilder.Entity<Department>().ToTable("Department");
             modelBuilder.Entity<OfficeAssignment>().ToTable("OfficeAssignment");
             modelBuilder.Entity<CourseAssignment>().ToTable("CourseAssignment");
-
-            modelBuilder.Entity<CourseAssignment>()
-                .HasKey(ca => new { ca.CourseID, ca.InstructorID });
-
-            modelBuilder.Entity<CourseAssignment>()
-                .HasOne(ca => ca.Instructor)
-                .WithMany(i => i.CourseAssignments)
-                .HasForeignKey(ca => ca.InstructorID);
-
-            modelBuilder.Entity<CourseAssignment>()
-                .HasOne(ca => ca.Course)
-                .WithMany(c => c.CourseAssignments)
-                .HasForeignKey(ca => ca.CourseID);
         }
+
     }
+
 }

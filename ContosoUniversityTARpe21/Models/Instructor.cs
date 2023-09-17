@@ -1,37 +1,37 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using ContosoUniversityTARpe21.Models;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Security.Cryptography.X509Certificates;
 
 namespace ContosoUniversityTARpe21.Models
 {
     public class Instructor
     {
-        public int ID { get; set; }
 
+        [Key]
+        public int Id { get; set; }
         [Required]
-        [Display(Name = "Last Name")]
         [StringLength(50)]
+        [Display(Name = "Last Name")]
         public string LastName { get; set; }
-
         [Required]
+        [StringLength(50)]
         [Column("FirstName")]
         [Display(Name = "First Name")]
-        [StringLength(50)]
         public string FirstMidName { get; set; }
-
-        [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
-        [Display(Name = "Hire Date")]
-        public DateTime HireDate { get; set; }
 
         [Display(Name = "Full Name")]
         public string FullName
         {
-            get { return LastName + ", " + FirstMidName; }
+            get
+            { return LastName + ", " + FirstMidName; }
         }
-
-        public ICollection<Course> Courses { get; set; }
-        public OfficeAssignment OfficeAssignment { get; set; }
-        public ICollection<CourseAssignment> CourseAssignments { get; set; }
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [Display(Name = "Hire Date")]
+        public DateTime HireDate { get; set; }
+        public ICollection<CourseAssignment>? CourseAssignments { get; set; }
+        public OfficeAssignment? OfficeAssignment { get; set; }
 
     }
 }
