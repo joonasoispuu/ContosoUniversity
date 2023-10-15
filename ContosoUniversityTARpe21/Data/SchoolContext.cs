@@ -1,5 +1,4 @@
-﻿using ContoseUniversity.Models;
-using ContosoUniversityTARpe21.Models;
+﻿using ContosoUniversityTARpe21.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace ContoseUniversity.Data

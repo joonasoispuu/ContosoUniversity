@@ -1,5 +1,3 @@
-using ContoseUniversity.Models;
-using ContosoUniversityTARpe21.Models;
 using System.ComponentModel.DataAnnotations;
 
 namespace ContosoUniversityTARpe21.Models

@@ -1,4 +1,6 @@
-﻿namespace ContosoUniversityTARpe21.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ContosoUniversityTARpe21.Models
 {
     public class Student
     {
@@ -6,6 +8,14 @@
         public string LastName { get; set; }
         public string FirstMidName { get; set; }
         public DateTime EnrollmentDate { get; set; }
-        public ICollection<Enrollment> Enrollments { get; set; }
+
+        [Display(Name = "Full Name")]
+        public string FullName
+        {
+            get
+            { return LastName + ", " + FirstMidName; }
+        }
+        public ICollection<Enrollment>? Enrollments { get; set; }
+
     }
 }

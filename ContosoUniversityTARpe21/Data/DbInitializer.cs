@@ -1,5 +1,4 @@
 ﻿using ContoseUniversity.Data;
-using ContoseUniversity.Models;
 using ContosoUniversityTARpe21.Models;
 
 namespace ContosoUniversityTARpe21.Data

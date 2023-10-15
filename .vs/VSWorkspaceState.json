@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\ContosoUniversityTARpe21",
-    "\\ContosoUniversityTARpe21\\Controllers"
+    "\\ContosoUniversityTARpe21\\Controllers",
+    "\\ContosoUniversityTARpe21\\Models"
   ],
-  "SelectedNode": "\\ContosoUniversityTARpe21\\Controllers\\InstructorsController.cs",
+  "SelectedNode": "\\ContosoUniversityTARpe21\\Models\\CourseAssignment.cs",
   "PreviewInSolutionExplorer": false
 }
