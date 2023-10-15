@@ -1,4 +1,6 @@
-﻿using ContosoUniversityTARpe21.Models;
+﻿using ContoseUniversity.Data;
+using ContoseUniversity.Models;
+using ContosoUniversityTARpe21.Models;
 
 namespace ContosoUniversityTARpe21.Data
 {
@@ -31,14 +33,14 @@ namespace ContosoUniversityTARpe21.Data
 
             var instructors = new Instructor[]
             {
-                new Instructor {FirstMidName = "Tyrone", LastName =
-                "Vana", HireDate = DateTime.Parse("1995-03-11")},
-                new Instructor {FirstMidName = "Jamal", LastName =
-                "Peene", HireDate = DateTime.Parse("1992-01-1")},
-                new Instructor {FirstMidName = "Black", LastName =
-                "Jack", HireDate = DateTime.Parse("1993-02-5")},
-                new Instructor {FirstMidName = "Tyrone", LastName =
-                "Tyrone", HireDate = DateTime.Parse("1994-04-10")}
+                new Instructor {FirstMidName = "Bob", LastName =
+                "Boberson", HireDate = DateTime.Parse("1995-03-11")},
+                new Instructor {FirstMidName = "Greg", LastName =
+                "Men", HireDate = DateTime.Parse("1992-01-1")},
+                new Instructor {FirstMidName = "Man", LastName =
+                "Woman", HireDate = DateTime.Parse("1993-02-5")},
+                new Instructor {FirstMidName = "Paul", LastName =
+                "Puhvel", HireDate = DateTime.Parse("1994-04-10")}
             };
             foreach (Instructor i in instructors)
             {
@@ -54,7 +56,7 @@ namespace ContosoUniversityTARpe21.Data
                     Budget = 0,
                     StartDate = DateTime.Parse("2001-09-11"),
                     InstructorID = instructors.Single(i => i.LastName
-                    == "Vana").ID
+                    == "Boberson").ID
                 },
                 new Department
                 {
@@ -62,7 +64,7 @@ namespace ContosoUniversityTARpe21.Data
                     Budget = 0,
                     StartDate = DateTime.Parse("2006-09-11"),
                     InstructorID = instructors.Single(i => i.LastName
-                    == "Peene").ID
+                    == "Men").ID
                 },
                 new Department
                 {
@@ -70,7 +72,7 @@ namespace ContosoUniversityTARpe21.Data
                     Budget = 0,
                     StartDate = DateTime.Parse("2002-09-11"),
                     InstructorID = instructors.Single(i => i.LastName
-                    == "Tyrone").ID
+                    == "Woman").ID
                 },
 
             };
@@ -101,19 +103,19 @@ namespace ContosoUniversityTARpe21.Data
                 new OfficeAssignment()
                 {
                     InstructorID = instructors.Single(i => i.LastName
-                    == "Vana").ID,
+                    == "Boberson").ID,
                     Location = "A236",
                 },
                 new OfficeAssignment()
                 {
                     InstructorID = instructors.Single(i => i.LastName
-                     == "Peene").ID,
+                     == "Men").ID,
                      Location = "A349",
                 },
                 new OfficeAssignment()
                 {
                     InstructorID = instructors.Single(i => i.LastName
-                    == "Tyrone").ID,
+                    == "Woman").ID,
                     Location = "A66",
                 },
  };
@@ -128,32 +130,32 @@ namespace ContosoUniversityTARpe21.Data
                 new CourseAssignment
                 {
                     CourseID = courses.Single(c => c.Title == "Keemia").CourseID,
-                    InstructorID = instructors.Single(i => i.LastName == "Tyrone").ID
+                    InstructorID = instructors.Single(i => i.LastName == "Woman").ID
                 },
                 new CourseAssignment
                 {
                     CourseID = courses.Single(c => c.Title == "Testimine").CourseID,
-                    InstructorID = instructors.Single(i => i.LastName == "Tyrone").ID
+                    InstructorID = instructors.Single(i => i.LastName == "Woman").ID
                 },
                 new CourseAssignment
                 {
                     CourseID = courses.Single(c => c.Title == "Programmeerimine").CourseID,
-                    InstructorID = instructors.Single(i => i.LastName == "Vana").ID
+                    InstructorID = instructors.Single(i => i.LastName == "Men").ID
                 },
                 new CourseAssignment
                 {
                     CourseID = courses.Single(c => c.Title == "Riigikaitse").CourseID,
-                    InstructorID = instructors.Single(i => i.LastName == "Vana").ID
+                    InstructorID = instructors.Single(i => i.LastName == "Men").ID
                 },
                 new CourseAssignment
                 {
                     CourseID = courses.Single(c => c.Title == "").CourseID,
-                    InstructorID = instructors.Single(i => i.LastName == "Peene").ID
+                    InstructorID = instructors.Single(i => i.LastName == "Woman").ID
                 },
                 new CourseAssignment
                 {
                     CourseID = courses.Single(c => c.Title == "Mathematics").CourseID,
-                    InstructorID = instructors.Single(i => i.LastName == "Peene").ID
+                    InstructorID = instructors.Single(i => i.LastName == "Woman").ID
                 }
             };
 

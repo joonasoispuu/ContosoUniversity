@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using ContoseUniversity.Data;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 
 namespace ContosoUniversityTARpe21.Data
@@ -8,7 +9,7 @@ namespace ContosoUniversityTARpe21.Data
         public SchoolContext CreateDbContext(string[] args)
         {
             var optionsBuilder = new DbContextOptionsBuilder<SchoolContext>();
-            optionsBuilder.UseSqlServer("Server=DESKTOP-KPKLE7Q;Database=ContosoUniversity;Trusted_Connection=True;MultipleActiveResultSets=True");
+            optionsBuilder.UseSqlServer("Server=DESKTOP-KPKLE7Q;Database=ContosoUniversity1;Trusted_Connection=True;MultipleActiveResultSets=True");
             return new SchoolContext(optionsBuilder.Options);
         }
     }

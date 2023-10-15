@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ContosoUniversityTARpe21.Data;
 using ContosoUniversityTARpe21.Models;
+using ContoseUniversity.Data;
 
 namespace ContosoUniversityTARpe21
 {

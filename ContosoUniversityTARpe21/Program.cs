@@ -1,3 +1,4 @@
+using ContoseUniversity.Data;
 using ContosoUniversityTARpe21.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;

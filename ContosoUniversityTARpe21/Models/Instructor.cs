@@ -9,7 +9,7 @@ namespace ContosoUniversityTARpe21.Models
     {
 
         [Key]
-        public int Id { get; set; }
+        public int ID { get; set; }
         [Required]
         [StringLength(50)]
         [Display(Name = "Last Name")]

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ContosoUniversity\\ContosoUniversityTARpe21\\ContosoUniversityTARpe21.csproj": {}
+    "C:\\Users\\mukim\\source\\repos\\ContosoUniversity\\ContosoUniversityTARpe21\\ContosoUniversityTARpe21.csproj": {}
   },
   "projects": {
-    "D:\\ContosoUniversity\\ContosoUniversityTARpe21\\ContosoUniversityTARpe21.csproj": {
+    "C:\\Users\\mukim\\source\\repos\\ContosoUniversity\\ContosoUniversityTARpe21\\ContosoUniversityTARpe21.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ContosoUniversity\\ContosoUniversityTARpe21\\ContosoUniversityTARpe21.csproj",
+        "projectUniqueName": "C:\\Users\\mukim\\source\\repos\\ContosoUniversity\\ContosoUniversityTARpe21\\ContosoUniversityTARpe21.csproj",
         "projectName": "ContosoUniversityTARpe21",
-        "projectPath": "D:\\ContosoUniversity\\ContosoUniversityTARpe21\\ContosoUniversityTARpe21.csproj",
+        "projectPath": "C:\\Users\\mukim\\source\\repos\\ContosoUniversity\\ContosoUniversityTARpe21\\ContosoUniversityTARpe21.csproj",
         "packagesPath": "C:\\Users\\mukim\\.nuget\\packages\\",
-        "outputPath": "D:\\ContosoUniversity\\ContosoUniversityTARpe21\\obj\\",
+        "outputPath": "C:\\Users\\mukim\\source\\repos\\ContosoUniversity\\ContosoUniversityTARpe21\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\VisualStudioSharedTools\\NuGetPackages"
