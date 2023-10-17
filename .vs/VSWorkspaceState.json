@@ -3,8 +3,10 @@
     "",
     "\\ContosoUniversityTARpe21",
     "\\ContosoUniversityTARpe21\\Controllers",
-    "\\ContosoUniversityTARpe21\\Models"
+    "\\ContosoUniversityTARpe21\\Models",
+    "\\ContosoUniversityTARpe21\\Views",
+    "\\ContosoUniversityTARpe21\\Views\\Instructors"
   ],
-  "SelectedNode": "\\ContosoUniversityTARpe21\\Models\\CourseAssignment.cs",
+  "SelectedNode": "\\ContosoUniversityTARpe21\\Views\\Instructors\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }
