@@ -12,27 +12,30 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ContosoUniversityTARpe21.Migrations
 {
     [DbContext(typeof(SchoolContext))]
-    [Migration("20231015173418_uusmig")]
-    partial class uusmig
+    [Migration("20231021093000_uus")]
+    partial class uus
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.21")
+                .HasAnnotation("ProductVersion", "6.0.23")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("ContoseUniversity.Models.Course", b =>
+            modelBuilder.Entity("ContosoUniversityTARpe21.Models.Course", b =>
                 {
                     b.Property<int>("CourseID")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CourseID"), 1L, 1);
 
                     b.Property<int>("Credits")
                         .HasColumnType("int");
 
-                    b.Property<int?>("DepartmentID")
+                    b.Property<int>("DepartmentID")
                         .HasColumnType("int");
 
                     b.Property<string>("Title")
@@ -85,10 +88,10 @@ namespace ContosoUniversityTARpe21.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasMaxLength(58)
+                        .HasColumnType("nvarchar(58)");
 
-                    b.Property<byte>("RowVersion")
+                    b.Property<byte?>("RowVersion")
                         .IsConcurrencyToken()
                         .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("tinyint");
@@ -195,17 +198,21 @@ namespace ContosoUniversityTARpe21.Migrations
                     b.ToTable("Student", (string)null);
                 });
 
-            modelBuilder.Entity("ContoseUniversity.Models.Course", b =>
+            modelBuilder.Entity("ContosoUniversityTARpe21.Models.Course", b =>
                 {
-                    b.HasOne("ContosoUniversityTARpe21.Models.Department", null)
+                    b.HasOne("ContosoUniversityTARpe21.Models.Department", "Department")
                         .WithMany("Courses")
-                        .HasForeignKey("DepartmentID");
+                        .HasForeignKey("DepartmentID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Department");
                 });
 
             modelBuilder.Entity("ContosoUniversityTARpe21.Models.CourseAssignment", b =>
                 {
-                    b.HasOne("ContoseUniversity.Models.Course", "Course")
-                        .WithMany()
+                    b.HasOne("ContosoUniversityTARpe21.Models.Course", "Course")
+                        .WithMany("CourseAssignments")
                         .HasForeignKey("CourseID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -232,7 +239,7 @@ namespace ContosoUniversityTARpe21.Migrations
 
             modelBuilder.Entity("ContosoUniversityTARpe21.Models.Enrollment", b =>
                 {
-                    b.HasOne("ContoseUniversity.Models.Course", "Course")
+                    b.HasOne("ContosoUniversityTARpe21.Models.Course", "Course")
                         .WithMany("Enrollments")
                         .HasForeignKey("CourseID")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -260,8 +267,10 @@ namespace ContosoUniversityTARpe21.Migrations
                     b.Navigation("Instructor");
                 });
 
-            modelBuilder.Entity("ContoseUniversity.Models.Course", b =>
+            modelBuilder.Entity("ContosoUniversityTARpe21.Models.Course", b =>
                 {
+                    b.Navigation("CourseAssignments");
+
                     b.Navigation("Enrollments");
                 });
 

@@ -1,7 +1,7 @@
 ﻿@model ContosoUniversityTARpe21.Models.Student
-
 @{
     ViewData["Title"] = "Edit";
+    var courses = ViewData["Courses"] as List<ContosoUniversityTARpe21.Models.AssignedCourseData>;
 }
 
 <h1>Edit</h1>
@@ -28,6 +28,37 @@
                 <input asp-for="EnrollmentDate" class="form-control" />
                 <span asp-validation-for="EnrollmentDate" class="text-danger"></span>
             </div>
+
+            <div class="form-group">
+                <label>Courses</label>
+                <table class="table">
+                    <tbody>
+                        @for (int i = 0; i < courses.Count; i++)
+                        {
+                            if (i % 3 == 0)
+                            {
+                                if (i != 0)
+                                {
+                                    @:</tr>
+                                }
+                                @:<tr>
+                            }
+
+                            <td>
+                                <input type="checkbox" name="selectedCourses" value="@courses[i].CourseID" 
+                                @(courses[i].Assigned ? "checked" : "") />
+                                @courses[i].Title
+                            </td>
+
+                            if (i == courses.Count - 1)
+                            {
+                                @:</tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
@@ -40,5 +71,7 @@
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

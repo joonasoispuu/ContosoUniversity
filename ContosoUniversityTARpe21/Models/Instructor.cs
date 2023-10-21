@@ -20,7 +20,7 @@ namespace ContosoUniversityTARpe21.Models
         public string FullName
         {
             get
-            { return LastName + ", " + FirstMidName; }
+            { return LastName + " " + FirstMidName; }
         }
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyy-MM-dd}",

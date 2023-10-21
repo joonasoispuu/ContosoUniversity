@@ -19,7 +19,7 @@ public class Program
 
         CreateDbIfNotExists(app);
 
-       
+
 
         // Configure the HTTP request pipeline.
         if (!app.Environment.IsDevelopment())
@@ -59,10 +59,5 @@ public class Program
             }
         }
     }
-    public static IHostBuilder CreateHostBuilder(string[] args) => 
-        Host.CreateDefaultBuilder(args)
-            .ConfigureWebHostDefaults(webBuilder =>
-            {
-                webBuilder.UseStartup<Program>();
-            });
+
 }
